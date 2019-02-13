@@ -153,6 +153,7 @@ public class HammingDist
 	 */
 	public String toString()
 	{
+		//formats the output of the toString method to be as specified
 		return String.format("The Hamming Distance of %s and %s: %s.\nOut of 119, for %s, number of "
 				+ "nodes are: %s, %s, %s, %s and\nfor %s, number of nodes are: %s, %s, %s, %s respectively."
 				, code1,code2,hammDist,code1,node1[0],node1[1],node1[2],node1[3],code2,node2[0],node2[1],node2[2],node2[3] );
