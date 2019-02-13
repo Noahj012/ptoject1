@@ -15,10 +15,19 @@ public class HammingDist
 		
 	}
 	
+	/**
+	 * compares the two stations codes intilized in the the Hammingdist constructor
+	 * and runs a loop to compare the two stations code a letter at a time to calculate the hammingdist
+	 * @param x
+	 * @param y
+	 * @return
+	 */
 	public int calculatingHammingDstance(String x, String y)
 	{
+		// keeps trakc of the different letters in the two stations code
 		int diffCount = 0;
 		
+		//loops through the two given string codes letter by letter and incraments tje differences between them
 		for (int i = 0; i < 4; ++i)
 		{
 			if (x.charAt(i) != y.charAt(i))
