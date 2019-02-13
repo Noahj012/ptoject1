@@ -46,6 +46,7 @@ public class HammingDist
 		
 		return diffCount;
 	}
+	
 	/**
 	 * This methods compares the 2 codes given in the constructor to the rest of the station codes and calculates the hamming dist
 	 * and then calcs the node distance 
@@ -55,14 +56,18 @@ public class HammingDist
 	 */
 	public void calculateNode(String station1, String station2)
 	{
+		// declares two variables to keep track of the hamming distances of the stations code
 		int diffCount1 = 0;
 		int diffCount2 = 0;
 		
+		//loops through the remaining 119 station codes
 		for (int j = 0; j < stationsCodes.size(); ++j)
 		{
+			// this compares the current station code to the inputed stations codes from the constructor to calculate the hamming dist
 			diffCount1 = calculatingHammingDstance(station1,stationsCodes.get(j));
 			diffCount2 = calculatingHammingDstance(station2, stationsCodes.get(j));
 		
+			// a layered if elese statement to incrament the correct array index to keep track of the node distances
 			if (diffCount1 == 1)
 			{
 				++node1[0];
@@ -146,6 +151,7 @@ public class HammingDist
 		}
 		
 	}
+	
 	/**
 	 * The Hamming Distance of NRMN and NOWA: 3.
 		Out of 119, for NRMN, number of nodes are: 0, 0, 23, 96 and
