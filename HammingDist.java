@@ -7,6 +7,8 @@ public class HammingDist
 {
 	private ArrayList<String> stationsCodes = new ArrayList<String>();
 	private int totalStations = 120;
+	private int[] node1 = new int[4];
+	private int[] node2 = new int[4];
 	
 	public HammingDist(String station1, String station2) throws IOException
 	{
