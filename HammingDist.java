@@ -14,7 +14,22 @@ public class HammingDist
 	{
 		readFile("Mesonet.txt");
 		calculatingHammingDstance(station1, station2);
+		calculateNode(station1, station2);
 		
+		for (int i = 0; i < 4; ++i)
+		{
+			System.out.print(node1[i]);
+			
+			
+		}
+		
+		System.out.println();
+		
+		for (int i = 0; i < 4; ++i)
+		{
+			
+			System.out.print(node2[i]);
+		}
 	}
 	
 	/**
@@ -41,10 +56,67 @@ public class HammingDist
 		return diffCount;
 	}
 	
-	public int calculateNode()
+	public void calculateNode(String station1, String station2)
 	{
+		int diffCount1 = 0;
+		int diffCount2 = 0;
 		
-		return 0;
+		for (int j = 0; j < stationsCodes.size(); ++j)
+		{
+			for (int i = 0; i < 4; ++i)
+			{
+				if (station1.charAt(i) != stationsCodes.get(j).charAt(i))
+				{
+					++diffCount1;
+					//System.out.println(diffCount1);
+				}
+			
+				if (station2.charAt(i) != stationsCodes.get(j).charAt(i))
+				{
+					++diffCount2;
+				}
+	
+			 }
+		
+			if (diffCount1 == 1)
+			{
+				++node1[0];
+				
+			}
+			if (diffCount1 == 2)
+			{
+				++node1[1];
+			}
+			if (diffCount1 == 3)
+			{
+				++node1[2];
+			}
+			if (diffCount1 == 4)
+			{
+				++node1[3];
+			}
+			
+			if (diffCount2 == 1)
+			{
+				++node2[0];
+			}
+			if (diffCount2 == 2)
+			{
+				++node2[1];
+			}
+			if (diffCount2 == 3)
+			{
+				++node2[2];
+			}
+			if (diffCount2 == 4)
+			{
+				++node2[3];
+			}
+			
+			diffCount1 = 0;
+			diffCount2 = 0;
+		}
+			
 	}
 	
 	/**
