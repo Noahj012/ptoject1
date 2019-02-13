@@ -16,20 +16,6 @@ public class HammingDist
 		calculatingHammingDstance(station1, station2);
 		calculateNode(station1, station2);
 		
-		for (int i = 0; i < 4; ++i)
-		{
-			System.out.print(node1[i]);
-			
-			
-		}
-		
-		System.out.println();
-		
-		for (int i = 0; i < 4; ++i)
-		{
-			
-			System.out.print(node2[i]);
-		}
 	}
 	
 	/**
@@ -55,7 +41,13 @@ public class HammingDist
 		
 		return diffCount;
 	}
-	
+	/**
+	 * This methods compares the 2 codes given in the constructor to the rest of the station codes and calculates the hamming dist
+	 * and then calcs the node distance 
+	 * 
+	 * @param station1
+	 * @param station2
+	 */
 	public void calculateNode(String station1, String station2)
 	{
 		int diffCount1 = 0;
@@ -68,7 +60,6 @@ public class HammingDist
 				if (station1.charAt(i) != stationsCodes.get(j).charAt(i))
 				{
 					++diffCount1;
-					//System.out.println(diffCount1);
 				}
 			
 				if (station2.charAt(i) != stationsCodes.get(j).charAt(i))
