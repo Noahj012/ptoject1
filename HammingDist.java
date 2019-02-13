@@ -2,7 +2,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class HammingDist
 {
@@ -12,9 +11,26 @@ public class HammingDist
 	public HammingDist(String station1, String station2) throws IOException
 	{
 		readFile("Mesonet.txt");
+		calculatingHammingDstance(station1, station2);
+		
 	}
 	
-	public int calculatingDstance(String x, String y)
+	public int calculatingHammingDstance(String x, String y)
+	{
+		int diffCount = 0;
+		
+		for (int i = 0; i < 4; ++i)
+		{
+			if (x.charAt(i) != y.charAt(i))
+			{
+				++diffCount;
+			}
+		}
+		
+		return diffCount;
+	}
+	
+	public int calculateNode()
 	{
 		
 		return 0;
@@ -30,7 +46,7 @@ public class HammingDist
 	 */
 	public void readFile (String filename) throws IOException
 	{
-		//declars a string variable to store the stations code from the string array to be added to the arraylist
+		//Declars a string variable to store the stations code from the string array to be added to the arraylist
 		String sCode = "";
 		
 		//Declares buffered reader object to read the Mesonet.txt file
@@ -54,7 +70,7 @@ public class HammingDist
 			
 			stationsCodes.add(sCode);
 			filename = br.readLine();
-			System.out.println(filename);
+			
 			if (filename != null)
 			{
 				strg = filename.split(" ");
