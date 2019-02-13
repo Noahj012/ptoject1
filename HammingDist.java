@@ -6,25 +6,20 @@ import java.util.ArrayList;
 public class HammingDist
 {
 	private ArrayList<String> stationsCodes = new ArrayList<String>();
-	private int totalStations = 120;
 	private int[] node1 = new int[4];
 	private int[] node2 = new int[4];
+	private String code1 = "";
+	private String code2 = "";
+	private int hammDist = 0;
 	
 	public HammingDist(String station1, String station2) throws IOException
 	{
 		readFile("Mesonet.txt");
-		calculatingHammingDstance(station1, station2);
+		hammDist = calculatingHammingDstance(station1, station2);
 		calculateNode(station1, station2);
-		
-		for (int i = 0; i < 4; ++i)
-		{
-			System.out.print(node1[i]);
-		}
-		System.out.println();
-		for (int i = 0; i < 4; ++i)
-		{
-			System.out.print(node2[i]);
-		}
+
+		code1 = station1;
+		code2 = station2;
 		
 	}
 	
@@ -149,6 +144,15 @@ public class HammingDist
 				strg = filename.split(" ");
 			}
 		}
+		
+	}
+	/**
+	 * The Hamming Distance of NRMN and NOWA: 3.
+		Out of 119, for NRMN, number of nodes are: 0, 0, 23, 96 and
+		for NOWA, number of nodes are: 0, 5, 16, 98 respectively.
+	 */
+	public String toString()
+	{
 		
 	}
 	
