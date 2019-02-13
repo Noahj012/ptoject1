@@ -16,6 +16,16 @@ public class HammingDist
 		calculatingHammingDstance(station1, station2);
 		calculateNode(station1, station2);
 		
+		for (int i = 0; i < 4; ++i)
+		{
+			System.out.print(node1[i]);
+		}
+		System.out.println();
+		for (int i = 0; i < 4; ++i)
+		{
+			System.out.print(node2[i]);
+		}
+		
 	}
 	
 	/**
@@ -55,19 +65,8 @@ public class HammingDist
 		
 		for (int j = 0; j < stationsCodes.size(); ++j)
 		{
-			for (int i = 0; i < 4; ++i)
-			{
-				if (station1.charAt(i) != stationsCodes.get(j).charAt(i))
-				{
-					++diffCount1;
-				}
-			
-				if (station2.charAt(i) != stationsCodes.get(j).charAt(i))
-				{
-					++diffCount2;
-				}
-	
-			 }
+			diffCount1 = calculatingHammingDstance(station1,stationsCodes.get(j));
+			diffCount2 = calculatingHammingDstance(station2, stationsCodes.get(j));
 		
 			if (diffCount1 == 1)
 			{
