@@ -30,7 +30,7 @@ public class HammingDist
 	}
 
 	/**
-	 * compares the two stations codes intilized in the the Hammingdist constructor
+	 * compares the two stations codes initialized in the the Hammingdist constructor
 	 * and runs a loop to compare the two stations code a letter at a time to calculate the hammingdist
 	 * @param x
 	 * @param y
