@@ -155,7 +155,7 @@ public class HammingDist
 				strg = filename.split(" ");
 			}
 		}
-		
+		br.close();
 	}
 
 	/**
