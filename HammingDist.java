@@ -49,13 +49,12 @@ public class HammingDist
 				++diffCount;
 			}
 		}
-
 		return diffCount;
 	}
 
 	/**
 	 * This methods compares the 2 codes given in the constructor to the rest of the station codes and calculates the hamming dist
-	 * and then calcs the node distance 
+	 * and then calculates the node distance 
 	 * 
 	 * @param station1
 	 * @param station2
