@@ -125,7 +125,7 @@ public class HammingDist
 	 */
 	public void readFile (String filename) throws IOException
 	{
-		//Declars a string variable to store the stations code from the string array to be added to the arraylist
+		//Declares a string variable to store the stations code from the string array to be added to the arraylist
 		String sCode = "";
 
 		//Declares buffered reader object to read the Mesonet.txt file
