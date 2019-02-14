@@ -38,7 +38,7 @@ public class HammingDist
 	 */
 	public int calculatingHammingDstance(String x, String y)
 	{
-		// keeps trakc of the different letters in the two stations code
+		// keeps track of the different letters in the two stations code
 		int diffCount = 0;
 
 		//loops through the two given string codes letter by letter and incraments tje differences between them
